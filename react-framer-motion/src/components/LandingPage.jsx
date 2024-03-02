@@ -16,11 +16,14 @@ const LandingPage = () => {
                   animate={{width:"9vw"}}
                   transition={{ease:[0.5, 0, 0.75, 0], duration:1}}
                   
-                    className=' mr-[1vw] w-[9vw] h-[5.5vw] bg-red-600 relative rounded-md top-[1.2vw]'> </motion.div>)}        
+                    className=' mr-[1vw] w-[9vw] h-[5.5vw] overflow-hidden relative   top-[1.2vw]'> 
+                    
+                    <img src="https://ochi.design/wp-content/uploads/2022/04/content-image01.jpg" className=' rounded-md' alt="" />
+                    </motion.div>)}        
                 <h1 className=' uppercase text-[8vw] leading-[7vw]  font-["Test Founders Grotesk X-cond Sm Semi Bold"] font-bold tracking-tighter'>
                 {item}
                 </h1>
-                </div>
+                </div> 
             </div>
             })}
           
