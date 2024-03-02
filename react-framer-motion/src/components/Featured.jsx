@@ -78,7 +78,7 @@ const Featured = () => {
             <div className=' px-5 py-5 flex align-middle gap-3'>
                      <div className=' h-3 w-3 rounded-full bg-black mt-1.5'></div> PREMIUM BLEND
                     </div>
-            <Card text={"PREMIUM"}  value={3} imgSrc={"//ochi.design/wp-content/uploads/2022/12/PB-Front-4-663x551.png"}/>
+            <Card text={"PREMIUM BLEND"}  value={3} imgSrc={"//ochi.design/wp-content/uploads/2022/12/PB-Front-4-663x551.png"}/>
             <div className='button mt-4'>
                 <button className=' px-3 py-[2px] border-black rounded-3xl border mr-2'>
                     BRAND TEMPLATE

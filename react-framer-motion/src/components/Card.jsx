@@ -17,13 +17,19 @@ const Card = ({imgSrc,value,text}) => {
                     {/* since the image is inside the class card hence the round will not work unless we add overflow hidden */}
                     <div className='card w-full h-full rounded-3xl overflow-hidden '>
                         <img  className=' relative w-full h-full bg-cover' src={imgSrc} alt="" />
-                            <div className={` z-[9999] font-semibold flex overflow-hidden text-8xl  -translate-y-1/2 absolute top-[50%] ${value%2==0 && ishovering ? 'left-full -translate-x-1/2  ' : '' } ${value%2!=0 && ishovering ? 'right-full translate-x-1/2 ' : 'right-full translate-x-1/2' } `}>
+                            <div className={` z-[9999] font-semibold flex overflow-hidden text-8xl   absolute top-[50%] 
+                            ${value%2==0 && ishovering ? 'left-full -translate-x-1/2  ' : '' }
+                            ${value%2==0 && !ishovering ? 'left-full -translate-x-1/2  ' : '' }
+                            ${value%2!=0 && ishovering ? 'right-full translate-x-1/2 ' : '' }
+                            ${value%2!=0 && !ishovering ? 'right-full translate-x-1/2 ' : '' }
+                            
+                            `}>
                               {text?.split("").map((item,index)=>(
                                 //  need to check this why it does not work without the inline block ??
                                 <motion.span
                                 initial={{y:"100%"}}
                                 animate={ishovering ?{y:"0"}:{y:"100%"}}
-                                transition={{ease:[0.22,1,0.36,1],delay:index*.05}}
+                                transition={{ease:[0.22,1,0.36,1],delay:index*.02}}
                                 className=' inline-block ' 
 
                                 >{item}</motion.span>
