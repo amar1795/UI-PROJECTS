@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 import React, { useState } from 'react'
+import {Power4} from 'gsap/all';
 
-const Card = ({imgSrc,value}) => {
+const Card = ({imgSrc,value,text}) => {
 
   const [ishovering,setishovering]=useState(false);
 
@@ -10,18 +11,23 @@ const Card = ({imgSrc,value}) => {
             <div className='relative'>
             <div onMouseEnter={()=>{setishovering(true)}}
             onMouseLeave={()=>{setishovering(false)}}
-            className=' cardcontainer w-full h-[75vh] text-[#CDEA68]'>
+            className=' cardcontainer w-full h-[75vh] text-[#CDEA68] '>
               
-              {"FYDE".split("").map((item,index)=>{
-                <motion.span>
-                  {item}
-                </motion.span>
-              })}
+              
                     {/* since the image is inside the class card hence the round will not work unless we add overflow hidden */}
                     <div className='card w-full h-full rounded-3xl overflow-hidden '>
                         <img  className=' relative w-full h-full bg-cover' src={imgSrc} alt="" />
-                            <div className={` absolute top-[50%] ${value%2==0 ? 'left-full' :'right-full' }  `}>
-                              HELLO
+                            <div className={` z-[9999] font-semibold flex overflow-hidden text-8xl  -translate-y-1/2 absolute top-[50%] ${value%2==0 && ishovering ? 'left-full -translate-x-1/2  ' : '' } ${value%2!=0 && ishovering ? 'right-full translate-x-1/2 ' : 'right-full translate-x-1/2' } `}>
+                              {text?.split("").map((item,index)=>(
+                                //  need to check this why it does not work without the inline block ??
+                                <motion.span
+                                initial={{y:"100%"}}
+                                animate={ishovering ?{y:"0"}:{y:"100%"}}
+                                transition={{ease:[0.22,1,0.36,1],delay:index*.05}}
+                                className=' inline-block ' 
+
+                                >{item}</motion.span>
+                              ))}
                             </div>
 
                     </div>

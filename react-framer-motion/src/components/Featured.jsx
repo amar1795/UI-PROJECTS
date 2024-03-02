@@ -18,7 +18,7 @@ const Featured = () => {
                      <div className=' h-3 w-3 rounded-full bg-black mt-1.5'></div>FYDE
                     </div>
 
-            <Card value={0} imgSrc={"//ochi.design/wp-content/uploads/2023/10/Fyde_Illustration_Crypto_2-663x551.png"}/>
+            <Card text={"FYDE"} value={0} imgSrc={"//ochi.design/wp-content/uploads/2023/10/Fyde_Illustration_Crypto_2-663x551.png"}/>
             <div className='button mt-4'>
                 <button className=' px-3 py-[2px] border-black rounded-3xl border mr-2'>
                     AUDIT
@@ -40,7 +40,7 @@ const Featured = () => {
                     <div className=' px-5 py-5 flex align-middle gap-3'>
                      <div className=' h-3 w-3 rounded-full bg-black mt-1.5'></div> VISE
                     </div>
-            <Card value={1} imgSrc={"//ochi.design/wp-content/uploads/2022/09/Vise_front2-663x551.jpg"}/>
+            <Card text={"VISE"} value={1} imgSrc={"//ochi.design/wp-content/uploads/2022/09/Vise_front2-663x551.jpg"}/>
             <div className='button mt-4'>
                 <button className=' px-3 py-[2px] border-black rounded-3xl border mr-2'>
                     AGENCY
@@ -58,7 +58,7 @@ const Featured = () => {
             <div className=' px-5 py-5 flex align-middle gap-3'>
                      <div className=' h-3 w-3 rounded-full bg-black mt-1.5'></div> TRAVA 
                     </div>
-            <Card value={2} imgSrc={"//ochi.design/wp-content/uploads/2023/08/Frame-3875-663x551.jpg"}/>
+            <Card text={"TRAVA"} value={2} imgSrc={"//ochi.design/wp-content/uploads/2023/08/Frame-3875-663x551.jpg"}/>
             <div className='button mt-4'>
                 <button className=' px-3 py-[2px] border-black rounded-3xl border mr-2'>
                     BRAND IDENTITY
@@ -78,7 +78,7 @@ const Featured = () => {
             <div className=' px-5 py-5 flex align-middle gap-3'>
                      <div className=' h-3 w-3 rounded-full bg-black mt-1.5'></div> PREMIUM BLEND
                     </div>
-            <Card value={3} imgSrc={"//ochi.design/wp-content/uploads/2022/12/PB-Front-4-663x551.png"}/>
+            <Card text={"PREMIUM"}  value={3} imgSrc={"//ochi.design/wp-content/uploads/2022/12/PB-Front-4-663x551.png"}/>
             <div className='button mt-4'>
                 <button className=' px-3 py-[2px] border-black rounded-3xl border mr-2'>
                     BRAND TEMPLATE
