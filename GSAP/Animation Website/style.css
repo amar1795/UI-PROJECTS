@@ -1,0 +1,273 @@
+@font-face {
+    font-family: 'NewMachina';
+    src: url(./3856NeueMachina.woff2);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: NewMachina;
+
+    /* Add any other global styles here */
+}
+
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.starIcon{
+ height: 50px;
+ width: 50px;
+ rotate: 45deg;
+
+}
+
+.navleft{
+    display: flex;
+    align-items: center;
+}
+
+.navleft h1{
+    font-size: 3rem;
+   
+   
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+.navRight{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.navRight h1{
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.navRight button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid #000;
+    font-size: 1.2rem;
+    
+}
+
+.section1{
+    height: 80%;
+    width: 100%;
+    padding-top: 5vh;
+     display: flex;
+    padding: 0px 80px;
+}
+
+.section1 .left{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.section1 .left h1{
+    margin-top: 5rem;
+    font-size: 3.2rem;
+    margin-bottom: 20px;
+}
+
+.section1 .left p{
+    margin-top: 2rem;
+    margin-bottom: 20px;
+}
+
+.section1 .left button{
+    margin-top: 2rem;
+    width: 50%;
+    padding: 20px 20px;
+    border: none;
+    background-color: #000;
+    color: white;
+    border-radius: 10px;
+}
+
+
+.section1 .right{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.section1 .right {
+    background-image: url(https://metashot.org/_next/image?url=%2FIllustration.jpg&w=640&q=75);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70%;
+   margin-top: 4vh;
+    }
+
+    .section2{
+        height: 100%;
+        width: 100%;
+        
+    }
+    .section2 .Companies {
+        display: flex;
+        padding: 0px 80px;
+        margin-top: 5vh;
+        align-items: center;
+        gap: 40px;
+        justify-content: space-around;
+    }
+
+    .section2 .Companies img{
+       
+        height: 100%;
+        width: 150px;
+        
+    }
+
+    .top{
+        /* background-color: red; */
+        padding: 20px 60px;
+        display: flex;
+        gap: 20px;
+        /* align-items: center; */
+    }
+
+    .top h1{
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        background-color: yellowgreen;
+        width: 13%;
+        border-radius: 10px;
+    }
+
+    .top p{
+        /* background-color: violet; */
+        padding-top: 15px;
+        }
+
+
+.bottom{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 40px;
+    margin-top: 10vh;
+    
+}
+
+    .bottom .Card{
+        display: flex;
+        flex-shrink: none;
+        height: 20rem;
+        width: 40rem;
+        /* background-color: red   ; */
+        border: 2px solid #000;
+        border-radius: 20px;
+        border-bottom: 8px solid #000;
+
+    }
+        .cardLeft{
+            width: 60%;
+            display: flex;
+            /* background-color: green; */
+            flex-direction: column;
+            justify-content: space-around   ;
+            padding-left: 40px;
+        }
+
+        .cardLeft h1{
+            font-size: 2rem;
+            margin-top: 20px;
+            padding-left: 20px;
+            background-color: yellowgreen;
+            display: inline-block;
+            border-radius: 10px;
+            width: 80%;
+        }
+
+        .two {
+            background-color: #000;
+            color: white;
+        }
+
+        .three {
+            background-color: #000;
+            color: white;
+        }
+
+        .one .arrowButton{
+            background-color: black;
+            color: white;
+
+        }
+        .three .arrowButton{
+            background-color: white;
+            color: black;
+
+        }
+
+        .two .arrowButton{
+            background-color: white;
+            color: black;
+
+        }
+
+        .four .arrowButton{
+            background-color: black;
+            color: white;
+
+        }
+
+
+        .cardLeft div{
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        gap: 10px;
+        }
+
+       .cardLeft .arrowButton
+       {
+        height: 40px;
+        width: 40px;
+        /* background-color: #000;
+        color: white; */
+        border-radius: 50%;
+       }
+
+
+    .cardRight{
+        width: 40%;
+        padding: 20px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .cardRight img{
+        height: 70%;
+        width: 100%;
+        background-size: contain;
+       
+    }
