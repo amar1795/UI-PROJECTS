@@ -61,10 +61,10 @@ gsap.from(".section2 .Companies img",
 
  let l2 = gsap.timeline({
     scrollTrigger: {
-        trigger: ".section2",
+        trigger: ".section2 .bottom",
         scroller:"body",
-        start: "top 50%",
-        end: "bottom 50%",
+        start: "top 70%",
+        end: "bottom 90%",
         scrub: 0.2,
         // markers: true,
     }
