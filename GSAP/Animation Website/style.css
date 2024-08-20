@@ -8,7 +8,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: NewMachina;
-
     /* Add any other global styles here */
 }
 
@@ -16,6 +15,9 @@
 html,body{
     height: 100%;
     width: 100%;
+    overflow-x: hidden;
+    
+
 }
 
 
@@ -126,6 +128,8 @@ nav{
     .section2{
         height: 100%;
         width: 100%;
+        /* overflow-y: hidden; */
+        /* background-color: red; */
         
     }
     .section2 .Companies {
@@ -135,6 +139,7 @@ nav{
         align-items: center;
         gap: 40px;
         justify-content: space-around;
+        overflow-y: hidden;
     }
 
     .section2 .Companies img{
