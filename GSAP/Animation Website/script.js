@@ -4,7 +4,9 @@ tl.from("nav .navleft ,nav h1",{
     duration: 0.4,
     y: -100, 
     opacity: 0,
-    stagger: 0.2,
+    stagger: 0.1,
+    ease: "bounce.out",
+
 
 })
 
