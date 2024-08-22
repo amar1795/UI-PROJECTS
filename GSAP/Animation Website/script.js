@@ -6,8 +6,6 @@ tl.from("nav .navleft ,nav h1",{
     opacity: 0,
     stagger: 0.1,
     ease: "bounce.out",
-
-
 })
 
 // gsap.from("nav .navleft ", { 
@@ -42,7 +40,7 @@ gsap.from(".section1 .right", {
 });
 
 
-gsap.from(".section2 .Companies img", 
+    gsap.from(".section2 .Companies img", 
     {
     duration: 0.7,
     y: -200,
