@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "freight big pro";
+}
+
+html,body{
+    height:100%;
+    width: 100%;
+}
+
+#page1{
+    height: 100vh;
+    width: 100%;
+    background-color: #F5E41B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   position: relative;
+   
+   
+}
+
+#page1 h1{
+    font-size: 14vh;
+    font-weight: 100;
+    line-height: 11vh;
+    text-align: center;
+    color: white;
+    /* letter-spacing: -3px; */
+
+}
+
+#loader{
+    height: 100vh;
+    width: 100%;
+    background: #F5E41B;
+    position: fixed;
+    /* z-index: 1; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#loader h1{
+    font-size: 11vh;
+    font-weight: 100;
+    line-height: 11vh;
+    text-align: center;
+    letter-spacing: -3px;
+    
+}
