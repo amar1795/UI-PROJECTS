@@ -27,17 +27,19 @@ html,body{
     font-weight: 100;
     line-height: 11vh;
     text-align: center;
-    color: white;
-    /* letter-spacing: -3px; */
+    /* color: white; */
+    letter-spacing: -3px;
 
 }
 
 #loader{
     height: 100vh;
     width: 100%;
-    background: #F5E41B;
+    /* if opacity is decreased to 0 it will be visible irrespective of position being fixed */
+    background: #f5e41b;
     position: fixed;
-    /* z-index: 1; */
+    z-index: 2;
+    top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,10 +47,35 @@ html,body{
 }
 
 #loader h1{
-    font-size: 11vh;
+    font-size: 14vh;
     font-weight: 100;
     line-height: 11vh;
     text-align: center;
     letter-spacing: -3px;
+    z-index: 5;
+    color: white;
     
+
+}
+
+#loader #yellow{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f5e41b;
+    z-index: 3;
+    
+}
+
+#loader video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* opacity: 0.5; */
+    z-index: 1;
 }
