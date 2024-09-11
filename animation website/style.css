@@ -17,8 +17,8 @@ html,body{
     display: flex;
     justify-content: center;
     align-items: center;
-   position: relative;
-   
+    position: relative;
+
    
 }
 
@@ -27,8 +27,8 @@ html,body{
     font-weight: 100;
     line-height: 11vh;
     text-align: center;
-    /* color: white; */
     letter-spacing: -3px;
+    z-index: 5;
 
 }
 
@@ -38,7 +38,8 @@ html,body{
     /* if opacity is decreased to 0 it will be visible irrespective of position being fixed */
     background: #f5e41b;
     position: fixed;
-    z-index: 2;
+    z-index: 7;
+    /* no need of using top or left 0 in here */
     top: 0;
     display: flex;
     justify-content: center;
@@ -52,30 +53,153 @@ html,body{
     line-height: 11vh;
     text-align: center;
     letter-spacing: -3px;
-    z-index: 5;
+    z-index: 8;
+    /* can also change the colour in the timeline */
     color: white;
-    
-
 }
 
-#loader #yellow{
+#loader #yellow1{
     position: absolute;
+        /* no need of using top or left 0 in here */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: #f5e41b;
-    z-index: 3;
+    z-index: 8;
     
 }
 
+
 #loader video{
     position: absolute;
+        /* no need of using top or left 0 in here */
+
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     /* opacity: 0.5; */
-    z-index: 1;
+    z-index: 7;
+}
+
+
+#page2{
+    height: 100vh;
+    width: 100%;
+    background-color: #10bdd4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+ 
+}
+
+#page3{
+    height: 100vh;
+    width: 100%;
+    background-color: #22f51b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#nav{
+    position: absolute;
+    width: 100%;
+    /* background-color: red; */
+    padding: 20px 40px;
+    z-index: 10;
+    display: none;
+}
+
+#nav svg  path{
+    fill: black;
+}
+
+#page2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  text-align: center;
+
+
+}
+
+.elem{
+    width: 100%;
+    /* background-color: red; */
+    position: relative;
+
+   
+}
+
+.elem h2{
+ font-size: 7vw;
+ text-transform: uppercase;
+ font-weight: 100;
+ position: relative;
+ z-index: 1;
+ line-height: 5vw;
+ cursor: pointer;
+ transition: all ease 0.2s;
+ /* background-color: red; */
+}
+
+
+.elem .moving{
+    width: 100%;
+    white-space: nowrap;
+    background-color: #F5E41B;
+    padding: 8px 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-40%) scaleY(0);
+    transition: all ease 0.4s;
+
+}
+
+.elem .moving .moving-in{
+    display: inline-block;
+    white-space: nowrap;
+    animation: moving 4s linear infinite;
+
+}
+
+.elem .moving .moving-in h5{
+    display: inline-block;   
+    color: #000;
+    font-size: 20px;
+    font-weight: 400;
+    /* font-family: gilroy; */
+    text-transform: uppercase;
+    margin-right: 35px;
+    opacity: 0;
+    transition: all ease 0.4s;
+    transition-delay: 0.2s;
+
+}
+
+@keyframes moving{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.elem h2:hover + .moving{
+    transform: translate(0,-40%) scaleY(1);
+}
+
+.elem h2:hover + .moving .moving-in h5{ 
+    opacity: 1;
+}
+
+.elem h2:hover {
+   font-style: italic;
 }
