@@ -58,3 +58,15 @@ const scroll = new LocomotiveScroll({
   el: document.querySelector("main"),
   smooth: true,
 });
+
+
+let elems=document.querySelectorAll(".elem");
+let page2=document.querySelector("#page2");
+// let moving= document.querySelector("moving");
+
+elems.forEach((elem)=>{
+  elem.addEventListener("mouseenter",()=>{
+    const image=elem.getAttribute("data-image");
+    page2.style.backgroundImage=`url(${image})`;
+  })
+})

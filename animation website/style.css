@@ -8,6 +8,7 @@
 html,body{
     height:100%;
     width: 100%;
+    background: #F5E41B;
 }
 
 #page1{
@@ -80,6 +81,7 @@ html,body{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    
     /* opacity: 0.5; */
     z-index: 7;
 }
@@ -93,6 +95,8 @@ html,body{
     justify-content: center;
     align-items: center;
     position: relative;
+    background-size: cover;
+    background-position: center;
  
 }
 
@@ -159,6 +163,7 @@ html,body{
     top: 50%;
     transform: translate(0,-40%) scaleY(0);
     transition: all ease 0.4s;
+    overflow: hidden;
 
 }
 
@@ -181,6 +186,18 @@ html,body{
     transition: all ease 0.4s;
     transition-delay: 0.2s;
 
+}
+
+.elem .blur{
+    position: absolute;
+    width: 35%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background: linear-gradient(to right,#F5E41B,#F5E41B,#F5E41B);
+    box-shadow: 10px 0px 20px 20px #F5E41B, -10px 0px 20px 100px #F5E41B;
+    height: 100%;
+    z-index: 99;
 }
 
 @keyframes moving{
