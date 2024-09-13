@@ -8,11 +8,11 @@
 html,body{
     height:100%;
     width: 100%;
-    background: #F5E41B;
+    /* background: #F5E41B; */
 }
 
 #page1{
-    height: 100vh;
+    height: 110vh;
     width: 100%;
     background-color: #F5E41B;
     display: flex;
@@ -100,15 +100,6 @@ html,body{
  
 }
 
-#page3{
-    height: 100vh;
-    width: 100%;
-    background-color: #22f51b;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
 
 #nav{
     position: absolute;
@@ -219,4 +210,123 @@ html,body{
 
 .elem h2:hover {
    font-style: italic;
+}
+
+#page3{
+background-color: aliceblue;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;  
+
+}
+
+.image-container {  
+    padding: 15px 40px;
+    width: 32vw;
+   
+}
+
+
+.image-div{
+    position: relative;
+    height: 80vh;
+    width: 30vw;
+    overflow: hidden;
+    transition: all ease-in 1.5s;
+}
+
+
+.image-div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    scale: 1;
+    transition: all ease-in-out 0.3s;
+
+}
+
+.image-div:hover img{ 
+    scale: 1.1;
+    z-index: 1;
+ }
+
+.image-div .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.279);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: all ease 0.4s;
+    color: white;
+    z-index: 2;
+}
+
+.image-div .overlay p{
+    font-size: 8vh;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0;
+    transition: all ease 0.4s;
+    text-align: center;
+    line-height: 7vh;
+    cursor: pointer;
+}
+
+
+
+.image-div:hover .overlay{
+    background: rgb(0, 0, 0);
+}
+
+.image-div:hover .overlay p{
+   opacity: 1;
+}
+
+
+#footer{
+    height: 40vh;
+     width: 100%;
+     display: flex;
+     justify-content: flex-end;
+    background-color: aliceblue;
+     flex-direction: column;
+     align-items: center;
+
+}
+
+#footer i{
+    font-size: 7vh;
+   /* cursor: pointer; */
+}
+
+#footer .scroll-Box{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#footer h3{
+    
+    font-size:4vh;
+    font-weight: 100;
+    line-height: 1vh;
+    text-align: center;
+    /* letter-spacing: -3px; */
+    /* cursor: pointer; */
+    z-index: 5;
+    margin-bottom: 8vh;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+}
+
+#footer #foot{
+    width: 100%;
+    background-color: #000;
+    height: 50%;
 }

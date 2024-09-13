@@ -60,6 +60,12 @@ const scroll = new LocomotiveScroll({
 });
 
 
+document.querySelector("#footer .scroll-Box").addEventListener("click", () => {
+  scroll.scrollTo("#page1");
+  // alert("You are at the top of the page");
+});
+
+
 let elems=document.querySelectorAll(".elem");
 let page2=document.querySelector("#page2");
 // let moving= document.querySelector("moving");
