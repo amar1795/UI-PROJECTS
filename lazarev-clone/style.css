@@ -11,6 +11,14 @@ html,body{
 
 }
 
+
+#main #nav-bg{
+    background-color: black;
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+}
+
 #main nav{
     position: fixed;
     color: white;
@@ -21,6 +29,7 @@ html,body{
     align-items: flex-start;
     padding: 0 15vh;
     margin-top: 7vh;
+    background-color: black;
   
 }
 nav #left h4{
@@ -84,6 +93,10 @@ nav #right span svg{
     padding-bottom: 2vh;
 }
 
+#main #center .option p:hover{
+    color: #0DA34E;
+}
+
 
 #main #center .option h4{
     font-size: 1.5vh;
@@ -96,6 +109,10 @@ nav #right span svg{
 
 }
 
+#main #center .option h4:hover{
+    color: #0DA34E;
+}
+
 #center .option h4 span{
     display: inline-block;
     overflow: hidden;
@@ -105,7 +122,7 @@ nav #right span svg{
 
 
 #page1{
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background-color: black;
     color: white;
@@ -171,3 +188,69 @@ nav #right span svg{
     margin-right: 0;
 }
 
+#clients{
+   
+    width: 40%;
+    height: 12vh;
+    margin-top: 5vh;
+    white-space: nowrap;
+    overflow: hidden;
+
+  
+}
+
+#clients .move {
+    display: inline-block;
+    animation: animate 10s linear infinite;
+    position: relative;
+    top: 50%;
+    /* background-color: salmon; */
+}
+
+#clients .move img{
+    margin: 0vw 1.5vw;
+    
+}
+
+@keyframes animate {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-110%);
+    }
+
+}
+
+.moving{
+    position: relative;
+  
+}
+
+.moving #blur-left{
+    position: absolute;
+    width: 20%;
+    height: 100%;
+ 
+    z-index: 1;
+    top: 0px;
+    
+    
+    background: linear-gradient(to right, black, transparent);
+
+}
+
+.moving #blur-right{
+    position: absolute;
+    width: 20%;
+    height: 100%;
+ 
+    z-index: 1;
+    top: 0px;
+    right: 0px;
+    
+   
+    background: linear-gradient(to right, transparent, black);
+
+}
