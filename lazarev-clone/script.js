@@ -69,3 +69,33 @@ nav.addEventListener('mouseleave', function() {
         });
     
 });
+
+
+let infodiv=document.querySelectorAll('.info-div');
+
+
+infodiv.forEach((div)=>{
+    div.addEventListener('mouseenter',()=>{
+       console.log(div.childNodes[5])
+       div.childNodes[5].style.opacity=1;
+
+       gsap.to(div.childNodes[5],{
+           opacity:1,
+           scale:1,
+       })
+    })
+
+    div.addEventListener('mouseleave',()=>{
+        gsap.to(div.childNodes[5],{
+            opacity:0,
+            scale:0,
+        })
+    })
+
+    div.addEventListener('mousemove',(dets)=>{
+        gsap.to(div.childNodes[5],{
+           x:dets.x-div.getBoundingClientRect().x-50,
+            y:dets.y-div.getBoundingClientRect().y-50,
+        })
+    })
+})
