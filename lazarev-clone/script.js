@@ -99,3 +99,26 @@ infodiv.forEach((div)=>{
         })
     })
 })
+
+
+
+let video=document.querySelector('#page3 video');
+let playButton=document.querySelector('#page3 #center #playButton');
+
+playButton.addEventListener('click',()=>{
+    video.play();
+    playButton.style.display='none';
+
+    gsap.to(video,{
+        opacity:1,
+        transform:"scaleX(1) scaleY(1)",
+        // scale:1, //this would also work instead of transform
+
+    })
+})
+
+video.addEventListener('click',()=>{
+    video.pause();
+    playButton.style.display='block';
+    
+})

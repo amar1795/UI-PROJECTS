@@ -340,3 +340,72 @@ nav #right span svg{
    color: white;
    font-size: 3vh;
 }
+
+#page3{
+    height: 100vh;
+    width: 100%;
+    background-image: url("./photos/img1.jpg");
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    z-index: 9999;
+    
+
+}
+
+#page3 video{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transform: scaleX(0.7) scaleY(0);
+    
+}
+
+#page3 #center{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+}
+
+#page3 #center #playButton{
+    padding: 5vh;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 50%;
+
+    /* height: 15vh;
+    width: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+
+#playButton i{
+    font-size: 5vh;
+    color: black;
+    
+}
+
+#center h5{
+    margin-top: 2vh;
+    opacity: 0;
+    transition: all ease 0.2s;
+    transform: translateY(20%);
+    padding: 1.5vh;
+    background-color: white;
+    color: black;
+    border-radius: 50px;
+   
+}
+
+#playButton:hover + h5 {
+    opacity: 1;
+    transform: translateY(0%);
+}
