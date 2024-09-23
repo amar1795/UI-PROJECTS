@@ -152,6 +152,7 @@ bottomVideo.forEach((b)=>{
 
        
         b.childNodes[3].style.opacity=1;
+        b.childNodes[3].style.objectposition="center";
     
         b.childNodes[3].style.height="80%";
         b.childNodes[3].play();
@@ -160,7 +161,7 @@ bottomVideo.forEach((b)=>{
     b.addEventListener('mouseleave',()=>{
         b.childNodes[3].style.opacity=0;
         b.childNodes[3].style.height="50%";
-        b.childNodes[3].loop();
+        b.childNodes[3].load();
 
     })
 

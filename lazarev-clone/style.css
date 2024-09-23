@@ -498,11 +498,14 @@ nav #right span svg{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    opacity: 1 !important;
 }
 
 .first:hover .top i{
     margin-left: 2vh;
 }
+
+
 
 .first .top{
     height: 50%;
