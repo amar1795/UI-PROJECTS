@@ -122,3 +122,47 @@ video.addEventListener('click',()=>{
     playButton.style.display='block';
     
 })
+
+
+
+let rightimg = document.querySelectorAll('.middlebox .right ');
+let rightvideo=document.querySelector('.middlebox .right video');
+
+rightimg.forEach((r)=>{
+    r.addEventListener('mouseenter',()=>{
+        r.childNodes[3].play();
+        r.childNodes[3].style.opacity=1;
+        
+      
+    })
+
+    r.addEventListener('mouseleave',()=>{
+        r.childNodes[3].style.opacity=0;
+        r.childNodes[3].load();
+        
+       
+    })
+})
+
+
+let bottomVideo=document.querySelectorAll('.first .bottom');
+
+bottomVideo.forEach((b)=>{
+    b.addEventListener('mouseenter',()=>{
+
+       
+        b.childNodes[3].style.opacity=1;
+    
+        b.childNodes[3].style.height="80%";
+        b.childNodes[3].play();
+    })
+
+    b.addEventListener('mouseleave',()=>{
+        b.childNodes[3].style.opacity=0;
+        b.childNodes[3].style.height="50%";
+        b.childNodes[3].loop();
+
+    })
+
+   
+})
