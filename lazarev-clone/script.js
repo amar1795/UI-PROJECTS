@@ -76,7 +76,7 @@ let infodiv=document.querySelectorAll('.info-div');
 
 infodiv.forEach((div)=>{
     div.addEventListener('mouseenter',()=>{
-       console.log(div.childNodes[5])
+    //    console.log(div.childNodes[5])
        div.childNodes[5].style.opacity=1;
 
        gsap.to(div.childNodes[5],{
@@ -150,10 +150,8 @@ let bottomVideo=document.querySelectorAll('.first .bottom');
 bottomVideo.forEach((b)=>{
     b.addEventListener('mouseenter',()=>{
 
-       
         b.childNodes[3].style.opacity=1;
-        b.childNodes[3].style.objectposition="center";
-    
+        b.childNodes[3].style.objectposition="center";   
         b.childNodes[3].style.height="80%";
         b.childNodes[3].play();
     })
@@ -166,4 +164,34 @@ bottomVideo.forEach((b)=>{
     })
 
    
+})
+
+
+let page4Right=document.querySelectorAll('#page4 .middlebox .right');
+
+page4Right.forEach((r)=>{
+
+    r.addEventListener('mouseenter',()=>{
+    
+           gsap.to(r.childNodes[5],{
+               opacity:1,
+               scale:1,
+           })
+        })
+    
+        r.addEventListener('mouseleave',()=>{
+            gsap.to(r.childNodes[5],{
+                opacity:0,
+                scale:0,
+            })
+        })
+    r.addEventListener('mousemove',(dets)=>{
+        gsap.to(r.childNodes[5],{
+            x:dets.x-r.getBoundingClientRect().x-50,
+             y:dets.y-r.getBoundingClientRect().y-50,
+         })
+   
+    })
+
+
 })

@@ -250,13 +250,10 @@ nav #right span svg{
 .moving #blur-right{
     position: absolute;
     width: 20%;
-    height: 100%;
- 
+    height: 100%; 
     z-index: 1;
     top: 0px;
-    right: 0px;
-    
-   
+    right: 0px; 
     background: linear-gradient(to right, transparent, black);
 
 }
@@ -267,9 +264,10 @@ nav #right span svg{
     background-color: black;
     display: flex;
     justify-content: space-between;
-   padding: 0vh 15vh;
-   padding-top: 15vh;
-   color: white;
+    padding: 0vh 15vh;
+    padding-top: 15vh;
+    color: white;
+    padding-bottom: 10vh;
 
 }
 
@@ -323,7 +321,6 @@ nav #right span svg{
 #page2 #right .info-div .arrow-info{
     display: flex;
     justify-content: space-between;
-    /* background-color: red; */
     width: 13%;
    
    
@@ -342,6 +339,7 @@ nav #right span svg{
 }
 
 #page3{
+    
     height: 100vh;
     width: 100%;
     background-image: url("./photos/img1.jpg");
@@ -355,6 +353,9 @@ nav #right span svg{
     
 
 }
+
+
+
 
 #page3 video{
     position: absolute;
@@ -429,17 +430,60 @@ nav #right span svg{
     
 }
 
+.middlebox .right{
+    position: relative;  
+    overflow: hidden;
+
+}
 
 
-.right img{
+.right>img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     position: absolute;
-    z-index: 1;
-    
-   
+    z-index: 1;  
 }
+
+
+
+#page4 .right .hover-image {
+    position: absolute;
+    height: 18vh;
+    width: 18vh;
+    object-fit: cover;
+    z-index: 2;
+    border-radius: 50%;
+    background-color: rgb(30, 140, 199);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    cursor: pointer;
+
+}
+
+.right .hover-image p{
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    font-size: 1.5vh;
+    font-weight: 100;
+    padding: 1vh;
+    color: white;
+    text-align: center;
+}
+
+.right .hover-image i{
+    position: absolute;
+    top: 15%;
+    right: 10%;
+    font-size: 2.5vh;
+    font-weight: 100;
+    padding: 1vh;
+    color: white;
+    text-align: center;
+}
+
 
 .right video{
     width: 100%;
@@ -524,6 +568,7 @@ nav #right span svg{
     font-weight: 100;
 }
 
+
 .first .bottom img{
     width: 100%;
     height: 50%;
@@ -575,8 +620,203 @@ nav #right span svg{
 }
 
 
+#page5{
+    min-height: 200vh;
+    width: 100%;
+    background-color: black;
+    color: #fff;
+    display: flex;
+    padding: 10vh 15vh;
+    position: relative;
+}
+
+#page5 #left{
+    width: 30%;
+    /* background-color: green; */
+    
+   
+}
+
+#page5 #right{
+    width: 70%;
+    /* background-color: red; */
+    
+   
+}
+
+
+#left button{
+    position: sticky;
+    top: 20vh;
+    background-color: #0DA34E;
+    padding: 3vh 2vh;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    width: 15vw;
+    color: white;
+    font-size: 2vh;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+button p{
+    margin-top: 0.5vh;
+    font-size: 2.2vh;
+}
+
+button i{
+    margin-left: 2vh;
+    font-size: 3vh;
+    /* background-color: red; */
+}
+
+#page5 #right #top{
+    /* background-color: red   ; */
+    padding-top: 5vh;
+    padding-bottom: 15vh;
+    border-bottom: 1px solid #dddd;
+}
+
+#page5 #right #top p{
+    font-size: 3vh;
+  
+}
+
+#page5 #right #top p>span{
+    display: inline-block;
+    font-size: 2vh;
+    
+}
+
+#page5 #right #top p span{
+   /* background-color: red; */
+   display: inline-block;
+   width: 20vw;
+}
+
+
+#page5 .bottom .heading  {
+   /* background-color: red; */
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+    height:35vh;
+    padding-bottom: 8vh;
+
+
+}
+
+#page5 .bottom .heading h2{
+    padding-top: 5vh;
+    font-size: 6vh;
+}
+
+#page5 .bottom .heading .heading-bottom {
+
+    /* background-color: pink; */
+    display: flex;
+    gap:10px
+
+}
+
+#page5 .bottom .heading button{
+    padding: 2vh 5vh;
+    border-radius: 50px;
+    border: none;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 1.7vh;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+
+}
+
+.bottom .heading button span {
+background-color: #0DA34E;
+position: absolute;
+display: inline-block;
+height: 100%;
+width: 100%;
+top:0;
+left: 0;
+transform: translateY(100%);
+z-index: -1;
+transition: all ease 0.2s;
+
+}
+
+#page5 .bottom .heading button:hover span{
+    transform: translateY(0%);
+}
+
+#page5 .bottom .info-card {
+    display: flex;
+    justify-content: space-between;
+    /* background-color: red; */
+    padding-top: 5vh;
+    padding-bottom: 10vh;
+    border-top: 1px solid #dddd;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.bottom .info-card .overlay{
+    background-color: #dddddd44;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all ease-in 0.2s;
+}
+
+#page5 .bottom .info-card:hover .overlay{
+    opacity: 1;
+    transform: translateY(0%);
+
+
+} 
+
+
+#page5 .bottom .info-card:hover h2{
+    padding-left: 2vh;
+} 
+
+#page5 .bottom .info-card:hover i{
+    padding-right: 2vh;
+} 
 
 
 
+.bottom .info-card h2{
+    font-size: 3vh;
+    text-transform: uppercase;
+    font-weight: 100;
+    transition: all ease-in 0.2s;
 
+}
 
+.bottom .info-card i{
+    transition: all ease-in 0.2s;
+
+}
+
+.bottom .info-card p{
+    /* background-color: red; */
+    width: 35vw;
+    font-size: 2vh;
+}
+
+#page6{
+    height: 100vh;
+    width: 100%;
+}
