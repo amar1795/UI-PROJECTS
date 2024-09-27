@@ -47,9 +47,9 @@ function locomotiveScrollTrigger(params) {
 
 locomotiveScrollTrigger();
 
-let nav = document.querySelector('#main #center');
+let nav = document.querySelector('nav #center');
 let menuoptions = document.querySelectorAll('.option h4');
-let border_bottom = document.querySelector('#main #nav-bottom');
+let border_bottom = document.querySelector('nav #nav-bottom');
 let isAnimating = false;
 
 
@@ -71,11 +71,13 @@ nav.addEventListener('mouseenter', function() {
         tl.to(border_bottom, {
             height: "20vh",
             duration: 0.3,
+            ease: "power1.inOut"
         });
         
         tl.to(menuoptions, {
             display: 'block',
             duration: 0.1,
+             ease: "power1.inOut"
         });
         
         tl.from("#center .option h4 span", {
@@ -278,7 +280,7 @@ cardOption.forEach((e,index)=>{
 
 
 gsap.from("#box2 .box-span h4",{
-    x:0,  
+    x:0, 
     scrollTrigger:{
         trigger:"#box2",
         scroller:"#main",
@@ -326,4 +328,40 @@ gsap.from("#box5 .box-span h4",{
         scrub:1,
     }
 })
+
+
+let loadingTl=gsap.timeline();
+
+loadingTl.from("#page1",{
+    opacity:0,
+    duration:0.2,
+    delay:0.2,
+    // if applied the animation in the same tl then all this wil happen in the same time and not sequentially hence we have added the timeline seperately for page 1 agin later
+    // transform: "scaleX(0.7) scaleY(0.2) translateY(90%)",
+    // borderRadius: "150px",
+    // duration: 0.9,
+    // ease: "expo.out"
+    
+})
+
+loadingTl.from("#page1",{
+    transform: "scaleX(0.7) scaleY(0.2) translateY(90%)",
+    borderRadius: "150px",
+    duration: 1.5,
+    ease: "expo.out"
+})
+
+    loadingTl.from("nav,#nav-bg", {
+        opacity: 0,
+        delay: -0.2
+    })
+
+
+    loadingTl.from("#page1 h1, #page1 p, #page1 div", {
+        opacity: 0,
+        duration: 0.5,
+        stagger: 0.2
+    })
+ 
+
 

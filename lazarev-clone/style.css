@@ -3,16 +3,19 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+
 }
 
 html,body{
     height: 100%;
     width: 100%;
+    position: relative;
+    
 
 }
 
 
-#main #nav-bg{
+ #nav-bg{
     background-color: black;
     width: 100%;
     height: 10vh;
@@ -21,7 +24,7 @@ html,body{
     
 }
 
-#main nav{
+ nav{
     position: fixed;
     color: white;
     width: 100%;
@@ -33,6 +36,7 @@ html,body{
     margin-top: 7vh;
     background-color: black;
     z-index: 10;
+ 
   
 }
 nav #left h4{
@@ -65,17 +69,20 @@ nav #right span svg{
     border: transparent;
 }
 
-#main #center {
+nav #center {
 
     display: flex;
     text-transform: uppercase;  
     position: relative;
     z-index: 5;
+   
 
 }
 
 
-#main #nav-bottom{
+/* instead of using trannsform translater Y for having the animation effect we can also use height instead and use gsap to get the same transform trnslate effect  like i did inside the navbottom  */
+
+nav #nav-bottom{
     position: absolute;
     background-color: black;
     left: 19vw;
@@ -87,7 +94,7 @@ nav #right span svg{
 }
 
 
-#main #center .option p{
+nav #center .option p{
     
     font-size: 2.1vh;
     padding: 0px 2vh;
@@ -96,12 +103,12 @@ nav #right span svg{
     padding-bottom: 2vh;
 }
 
-#main #center .option p:hover{
+nav #center .option p:hover{
     color: #0DA34E;
 }
 
 
-#main #center .option h4{
+nav #center .option h4{
     font-size: 1.5vh;
     padding: 0.8vh 2vh;
     cursor: pointer;
@@ -112,13 +119,14 @@ nav #right span svg{
 
 }
 
-#main #center .option h4:hover{
+nav #center .option h4:hover{
     color: #0DA34E;
 }
 
-#center .option h4 span{
+nav #center .option h4 span{
     display: inline-block;
     overflow: hidden;
+    /* transform: translateY(200%); */
 }
 
 
