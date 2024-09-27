@@ -70,20 +70,21 @@ nav.addEventListener('mouseenter', function() {
 
         tl.to(border_bottom, {
             height: "20vh",
-            duration: 0.3,
+            duration: -0.2,
             ease: "power1.inOut"
         });
         
         tl.to(menuoptions, {
             display: 'block',
-            duration: 0.1,
+            duration: -0.5,
              ease: "power1.inOut"
         });
         
         tl.from("#center .option h4 span", {
             y: 40,
+            
             stagger: {
-                amount: 0.5,
+                amount: 0.3,
             },
             clearProps: "all"  // Clears properties after animation completes
         });
@@ -105,13 +106,13 @@ nav.addEventListener('mouseleave', function() {
         gl.to("#center .option h4 span", {
             y: 40,
             stagger: {
-                amount: 0.5,
+                amount: 0.3,
             },
         });
 
         gl.to(menuoptions, {
             display: 'none',
-            duration: 0.1,
+            duration: -0.5,
         });
 
         gl.to(border_bottom, {

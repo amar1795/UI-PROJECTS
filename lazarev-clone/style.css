@@ -40,7 +40,7 @@ html,body{
   
 }
 nav #left h4{
-    font-size: 3.5vh;
+    font-size: 1.5rem;
     text-transform: uppercase;
 }
 
@@ -55,7 +55,7 @@ nav #right{
 }
 
 nav #right h4{
-    font-size: 2.2vh;
+    font-size: 1rem;
   
     cursor: pointer;
     text-transform: uppercase;
@@ -96,7 +96,7 @@ nav #nav-bottom{
 
 nav #center .option p{
     
-    font-size: 2.1vh;
+    font-size: 13.5px;
     padding: 0px 2vh;
     cursor: pointer;
     margin-top: 1vh;
@@ -109,7 +109,7 @@ nav #center .option p:hover{
 
 
 nav #center .option h4{
-    font-size: 1.5vh;
+    font-size: 10px;
     padding: 0.8vh 2vh;
     cursor: pointer;
     display: none;
